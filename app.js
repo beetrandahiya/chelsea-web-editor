@@ -9,13 +9,17 @@ function runJS() {
 //set default value for js
 function setDefaultJS() {
     document.getElementById("js").value
-        = "elem=document.getElementById('output');\n" +
-        "setCanvas(elem);\n" +
-        "function draw() {\n" +
-        "    clearCanvas();\n" +
-        " };\n" +
-        "draw();\n" +
-        "";
+        = " elem = document.getElementById('output');\n" +
+        " var t=0;\n" +
+        " setCanvas(elem);\n" +
+        " function draw(){\n" +
+        "     clearCanvas();\n" +
+        "    new point(100,100+t,'#fff',10);\n" +
+        "    new point(200,200,'#fff',10);\n" +
+        "    requestAnimationFrame(draw);\n" +
+        "    t++;\n" +
+        "    }\n" +
+        " draw();\n" ;
 }
 
 setDefaultJS();

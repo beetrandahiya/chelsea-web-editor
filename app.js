@@ -2,6 +2,7 @@
 
 //run js
 function runJS() {
+    //stop previous js
     var js_text = document.getElementById("js").value;
     eval(js_text);
 }
@@ -26,3 +27,5 @@ setDefaultJS();
 
 //set event listener
 document.getElementById("run-js").addEventListener("click", runJS);
+
+frameRate("#fps");

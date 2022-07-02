@@ -15,10 +15,10 @@ function setDefaultJS() {
         " setCanvas(elem);\n" +
         " function draw(){\n" +
         "     clearCanvas();\n" +
-        "    new point(100,100+t,'#fff',10);\n" +
-        "    new point(200,200,'#fff',10);\n" +
+        "    new point(200+100*sin(t),200+100*cos(t),'#e9d4ff',10);\n" +
+        "    new point(200,200,'#f4cfdf',20);\n" +
         "    requestAnimationFrame(draw);\n" +
-        "    t++;\n" +
+        "    t+=0.1;\n" +
         "    }\n" +
         " draw();\n" ;
 }
